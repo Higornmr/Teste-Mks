@@ -9,6 +9,7 @@ export const Container = styled.div`
   gap: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  z-index: 1;
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(1, 1fr);

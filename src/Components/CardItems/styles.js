@@ -56,16 +56,16 @@ export const Price = styled.div`
 `;
 export const Description = styled.div`
   height: 25px;
-  width: 192px;
+  width: 100%;
   display: flex;
-
+  padding: 5px;
   margin: 12px 0px;
   align-items: center;
   justify-content: center;
   font-weight: 300;
   font-size: 10px;
   line-height: 12px;
-  border: 1px solid black;
+
   color: #2c2c2c;
 `;
 

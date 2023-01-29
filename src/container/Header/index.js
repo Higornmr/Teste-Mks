@@ -1,5 +1,6 @@
 import React from "react";
 import CartIcon from "../../assets/vector.svg";
+
 import { Container, Cart, Vector, Logo } from "./styles";
 
 function Header() {
