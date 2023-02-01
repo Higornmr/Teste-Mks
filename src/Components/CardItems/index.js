@@ -3,27 +3,33 @@ import Bag from "../../assets/bag.svg";
 import {
   Container,
   Img,
-  NameInformation,
+  Information,
   Description,
   IconBag,
   Button,
   Price,
+  Name,
+  Brand,
+  InformationProduct,
 } from "./styles";
 
-function CardItems() {
+function CardItems({ item }) {
   return (
     <Container>
-      <Img></Img>
-
-      <NameInformation>
-        <h3>Nome do produtoproduto</h3>
+      <Img src={item.photo} />
+      <Information>
+        <InformationProduct>
+          <Name>{item.name}</Name>
+          <div></div>
+          <Brand>{item.brand}</Brand>
+        </InformationProduct>
         <Price>
-          <h2>R$ 399</h2>
+          <h2>{item.price}</h2>
         </Price>
-      </NameInformation>
+      </Information>
 
       <Description>
-        <p> Descrição do produtoDescrição do produtoDescrição do produto</p>
+        <p>{item.description}</p>
       </Description>
 
       <Button>

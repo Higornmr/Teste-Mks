@@ -1,5 +1,5 @@
 import React from "react";
-import CartIcon from "../../assets/vector.svg";
+import Menu from "../Menu";
 
 import { Container, Cart, Vector, Logo } from "./styles";
 
@@ -11,7 +11,8 @@ function Header() {
         <h3>Sistemas</h3>
       </Logo>
       <Vector>
-        <Cart src={CartIcon} alt="icone do carrinho de compra" />
+        <Menu />
+
         <p>0</p>
       </Vector>
     </Container>

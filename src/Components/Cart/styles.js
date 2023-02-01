@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100%;
+  height: auto;
   min-width: 40%;
-  background: #0f52ba;
-  box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  right: 0;
 `;
+
+// export const CloseCart = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 25px;
+//   height: 25px;
+//   background: #000000;
+//   border-radius: 50%;
+
+//   color: #ffffff;
+//   cursor: pointer;
+// `;
 
 export const ContainerItem = styled.div`
   display: flex;
@@ -31,40 +38,6 @@ export const Img = styled.img`
   border: 1px solid black;
   width: 80px;
   height: 87px;
-`;
-export const ContainerHeader = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  margin-top: 50px;
-
-  h2 {
-    font-weight: 700;
-    font-size: 27px;
-    line-height: 33px;
-    color: #ffffff;
-    width: 200px;
-    height: 80px;
-  }
-
-  button {
-    height: 50px;
-    width: 50px;
-    background: #000000;
-    border-radius: 50%;
-
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 15px;
-
-    color: #ffffff;
-  }
 `;
 
 export const Name = styled.div`
@@ -119,37 +92,4 @@ export const Price = styled.div`
   line-height: 17px;
 
   color: #000000;
-`;
-export const Valor = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  color: white;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 15px;
-  margin-top: 50px;
-`;
-
-export const FooterCart = styled.div`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-`;
-export const Button = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 80px;
-  background: #000000;
-
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 15px;
-
-  color: #ffffff;
-  cursor: pointer;
 `;

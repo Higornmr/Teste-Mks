@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 285px;
+  min-height: 380px;
   width: auto;
   background: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
@@ -11,29 +11,51 @@ export const Container = styled.div`
   margin-bottom: 45px;
 `;
 
-export const Img = styled.div`
+export const Img = styled.img`
   width: auto;
   height: 180px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+
+  margin-left: auto;
+  margin-right: auto;
 `;
-export const NameInformation = styled.div`
+
+export const InformationProduct = styled.div`
+  max-width: 100px;
+  margin-top: 5px;
+
+  div {
+    width: 100%;
+    border: 1px solid #2c2c2c;
+  }
+`;
+
+export const Information = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: auto;
   width: 100%;
   padding: 5px;
+  gap: 5px;
+`;
 
-  h3 {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #2c2c2c;
-  }
+export const Name = styled.p`
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2c2c2c;
+  margin-bottom: 10px;
+`;
+
+export const Brand = styled.p`
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2c2c2c;
 `;
 export const Price = styled.div`
   background: #373737;

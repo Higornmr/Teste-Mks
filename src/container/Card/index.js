@@ -2,19 +2,12 @@ import React from "react";
 import CardItems from "../../Components/CardItems";
 import { Container } from "./styles";
 
-function Card() {
+function Card({ products }) {
   return (
     <Container>
-      <CardItems />
-      <CardItems />
-      <CardItems />
-      <CardItems />
-      <CardItems />
-      <CardItems />
-      <CardItems />
-      <CardItems />
-      <CardItems />
-      <CardItems />
+      {products.map((item) => (
+        <CardItems item={item} />
+      ))}
     </Container>
   );
 }

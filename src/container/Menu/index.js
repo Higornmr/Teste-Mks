@@ -1,44 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import CartShopping from "../../Components/Cart";
+import { Cart } from "../Header/styles";
+import CartIcon from "../../assets/vector.svg";
 
 import {
   Container,
-  Img,
   ContainerHeader,
-  ContainerItem,
-  Name,
-  Quantity,
-  Price,
   Valor,
   Button,
+  FooterCart,
 } from "./styles";
 
 function Menu() {
+  const [showCart, setShowCart] = useState(true);
+
   return (
-    <Container>
-      <ContainerHeader>
-        <h2>Carrinho de Compras</h2>
-        <button>X</button>
-      </ContainerHeader>
-      <ContainerItem>
-        <Img></Img>
-        <Name>
-          <p>Nome do produtoproduto</p>
-        </Name>
-        <Quantity>
-          <button className="left">+</button>
-          <p>1</p>
-          <button className="right">-</button>
-        </Quantity>
-        <Price>
-          <h2>R$ 399</h2>
-        </Price>
-      </ContainerItem>
-      <Valor>
-        <p>Total:</p>
-        <p>R$ 800</p>
-      </Valor>
-      <Button>Finalizar Compra</Button>
-    </Container>
+    <div>
+      <Cart
+        src={CartIcon}
+        alt="icone do carrinho de compra"
+        onClick={() => setShowCart((prev) => !prev)}
+      />
+      {showCart && (
+        <Container>
+          <ContainerHeader>
+            <h2>Carrinho de Compras</h2>
+            <button onClick={() => setShowCart((prev) => !prev)}>X</button>
+          </ContainerHeader>
+          <CartShopping />
+          <FooterCart>
+            <Valor>
+              <p>Total:</p>
+              <p>R$ 800</p>
+            </Valor>
+            <Button>Finalizar Compra</Button>
+          </FooterCart>
+        </Container>
+      )}
+    </div>
   );
 }
 
